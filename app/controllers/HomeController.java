@@ -1,6 +1,8 @@
 package controllers;
 
 import application.repository.IdolRepository;
+import controllers.form.IdolForm;
+import play.data.Form;
 import play.data.FormFactory;
 import play.mvc.*;
 
