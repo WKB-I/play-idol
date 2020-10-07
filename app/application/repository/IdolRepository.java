@@ -1,7 +1,9 @@
 package application.repository;
 
-import domain.IdolList;
+import models.IdolEntity;
+
+import java.util.List;
 
 public interface IdolRepository {
-    IdolList ListAll();
+    List<IdolEntity> ListAll();
 }

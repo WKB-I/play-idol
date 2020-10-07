@@ -2,6 +2,7 @@ package controllers;
 
 import application.repository.IdolRepository;
 import controllers.form.IdolForm;
+import models.IdolRepositoryImpl;
 import play.data.Form;
 import play.data.FormFactory;
 import play.mvc.*;
@@ -25,7 +26,10 @@ public class HomeController extends Controller {
     }
 
     public Result index() {
-        return ok(views.html.index.render());
+        return ok(views.html.index.render(
+                "Idol List",
+                idolRepository.ListAll()
+        ));
     }
 
 }
